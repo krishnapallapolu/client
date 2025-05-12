@@ -48,7 +48,7 @@ export default function Events() {
       ) : (
         <div className="mb-4">
           <label htmlFor="event-select" className="block mb-2 font-medium text-gray-700">
-            Select an Event:
+            Select an Event ({events.length}) :
           </label>
           <select
             id="event-select"
@@ -61,7 +61,7 @@ export default function Events() {
             }}
             aria-label="Select an event"
           >
-            <option value="">-- Select an event --</option>
+            <option value="">-- Select an event  --</option>
             {events.map((event) => (
               <option key={event.id} value={event.id}>
                 {event.name}
